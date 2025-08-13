@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Bienvenue sur le site Officiel de  l'Universite EduGate-PH. Decouvrez nos formations, actualites, resultats d'examen et toutes les informations pour etudiants">
+    <title>Université EduGate-PH - Formations, actualites et resultats</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="swiper-bundle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        nav{
+            background-color: #370f7c;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        .logo h1{
+            margin-left: 10px;
+            font-size: 2rem;
+            font-family: Bradley Hand itc;
+            color: green;
+            text-shadow: 1px 1px 2px #fff;
+        }
+        #links{
+            z-index: 9999;
+        }
+        #links ul{
+            list-style: none;
+            display: flex;
+            margin-right: 10px;
+            z-index: 9999;
+        }
+        #links ul li{
+            margin: 0;
+        }
+        #links ul li a{
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 5px 7px;
+            border-right: 1px solid green;
+            border-left: 1px solid green;
+            display: flex;
+        }
+        #links ul li a:hover{
+            text-decoration: none;
+            background-color: #f4f4f4;
+            color: #370f7c;
+            border: 1px solid #370f7c;
+            border-radius: 5px;
+        }
+        .hero-section{
+            background-image: url("1200x680_index.jpg");
+            background-size: cover;
+            text-align: center;
+            margin: 20px;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            gap: 20px;
+            overflow: hidden;
+            height: 300px;
+            border-radius: 10px;
+            z-index: 1;
+
+        }
+        .hero-welcome{
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px green;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.3);
+            height: 100%;
+        }
+        .hero-welcome h2{
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 1px 1px 2px green;
+        }
+        .hero-welcome p{
+            font-size: 18px;
+            line-height: 1.6;
+            color: white;
+            text-shadow: 1px 1px 2px green;
+        }
+        .container{
+            background: rgba(0, 0, 0, 0.3);
+            height: 300px;
+        }
+        .swiper{
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide img{
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .description{
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+        }
+        .description h2{
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #370f7c;
+            text-shadow: 1px 1px 2px green;
+        }
+        .description p{
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .text{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px;
+            background-image: url("ecole-belge-casablanca-591x380.jpg");
+            background-size: cover;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px green;
+        }
+     
+        .mission, .formation, .nouveautes{
+            width: 30%;
+            height: 200px;
+            background-color: aliceblue;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px green;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .mission h3, .formation h3, .nouveautes h3{
+            width: 100%;
+            text-align: center;
+            height: 75px;
+            color: white;
+            text-shadow: 1px 1px 2px #370f7c;
+            font-size: 24px;
+            padding: 10px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+           
+        }
+        .mission h3{
+            background-image: url("succes.jpg");
+        }
+        .formation h3{
+            background-image: url("huge-29e2b06e0df09e049e63e312487d1af8.jpg")
+        }
+        .nouveautes h3{
+            background-image: url("restaurant-dish-meal-food-produce-meat-lunch-cuisine-steak-asian-food-vegetables-dinner-hors-d-oeuvre-steak-dinner-830752.jpg")
+        }
+        .mission p, .formation p, .nouveautes p{
+            padding: 10px;
+            font-size: 16px;
+            color: #333;
+            flex-grow: 1;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .plus{
+            color: green;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 10px;
+            text-align: center;
+            text-shadow: 1px 1px 2px green;
+        }
+        .test{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            gap: 20px;
+            background-image: url("ecole-belge-casablanca-591x380.jpg");
+            background-size: cover;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px green;
+
+        }
+        .examen, .resultat{
+            width: 30%;
+            height: 200px;
+            background-color: aliceblue;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px green;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+        }
+        .examen h3, .resultat h3{
+            width: 100%;
+            text-align: center;
+            height: 75px;
+            color: white;
+            text-shadow: 1px 1px 2px #370f7c;
+            font-size: 24px;
+            padding: 10px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+        }
+        .examen h3{
+            background-image: url(element5-digital-jCIMcOpFHig-unsplash.jpg)
+        }
+        .resultat h3{
+            background-image: url("American\ school\ of\ Yaounde\ educatii\ \(1\).JPG")
+        }
+        .examen p, .resultat p{
+            padding: 10px;
+            font-size: 16px;
+            color: #333;
+            flex-grow: 1;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .nouveau{
+            text-align: center;
+            font-size: 24px;
+            color: green;
+            margin: 20px auto;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px green;
+            background-color: #f4f4f4;
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px green;
+        }
+        footer{
+            background-color: #370f7c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        footer p{
+            margin: 5px 0;
+        }
+        footer a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .resultat:hover{
+            transform: scale(1.1) rotate(-5deg);
+            box-shadow: 1px 1px 10px gold;
+        }
+        .examen:hover{
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 1px 1px 10px gold;
+        }
+        .mission:hover, .formation:hover, .nouveautes:hover{
+            transform: scale(1.1);
+            box-shadow: 1px 1px 10px gold;
+        }
+        .box{
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .box h3{
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: white;
+            text-shadow: 1px 1px 2px green;
+        }
+        
+        .box i{
+            font-size: 30px;
+            color: white;
+            margin-bottom: 10px;
+        }
+        #burger{
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            display: none;
+        }
+        #burger i{
+            color: white;
+            font-size: 30px;
+        }
+     
+        fieldset{
+            border-radius: 20px;
+        }
+        label{
+            color: #370f7c;
+            margin: 20px;
+        }
+        input{
+            width:50%;
+            border-radius: 2px;
+            margin: 10px;
+            border: 0px;
+        }
+        textarea{
+            width: 100%;
+            height: fit-content;
+            border-radius: 0px 0 20px 20px;
+        }
+        .supEnv{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .WhatsApp{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+        .WhatsApp h2{
+            color: gray;
+            text-shadow: 1px 1px black;
+        }
+        .WhatsApp a{
+            margin-top: 5px;
+            text-decoration: none;
+            color: #370f7c;
+        }
+        .WhatsApp a:hover{
+            text-decoration: underline;
+        }
+        .logo-whatsapp{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+        .logo-whatsapp:hover{
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        .WhatsApp p{
+            font-size: 1.2rem;
+            color: gray;
+            text-align: center;
+            margin: 10px 0;
+        }
+        .sponsor{
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #370f7c;
+            width: 100%;
+        }
+        .sponsor h2{
+            color: green;
+            text-shadow: 1px 1px black;
+        }
+        .spn-container{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .spn-orange, .spn-france, .spn-total{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-size: cover;
+            background-position: center;
+        }
+        .spn-orange{
+            background-image: url('download.png');
+        }
+        .spn-france{
+            background-image: url('download\ \(1\).png');
+        }
+        .spn-total{
+            background-image: url('download.jpeg');
+        }
+        .spn-orange:hover, .spn-france:hover, .spn-total:hover{
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        .invest{
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .invest h2{
+            color: #370f7c;
+            text-shadow: 1px 1px black;
+            font-size: 1.5rem;
+        }
+        .invest p{
+            color: gray;
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+       
+
+       @media (max-width: 790px){
+            #links{
+                position: absolute;
+                top: 60px;
+                right:0;
+                flex-direction: column;
+                background: rgba(0, 0, 0, 0.7);
+                width: auto;
+                height: auto;
+                display: none;
+                padding: 20px;
+                border-radius: 0 0 0 10px;
+                z-index: 1000;
+                
+            }
+            #links ul{
+                flex-direction: column;
+            }
+            #links.active{
+                display: flex;
+            }
+            #burger{
+                display: flex;
+            }
+       }
+   
+        footer{
+            background-color: #370f7c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            
+        }
+        footer p{
+            margin: 5px 0;
+        }
+        footer a{
+            color: white;
+            text-decoration: none;
+        }
+        @media (max-width: 790px){
+            #links{
+                position: absolute;
+                top: 60px;
+                right:0;
+                flex-direction: column;
+                background: rgba(0, 0, 0, 0.7);
+                width: auto;
+                height: auto;
+                display: none;
+                padding: 20px;
+                border-radius: 0 0 0 10px;
+                z-index: 1000;
+                
+            }
+            #links ul{
+                flex-direction: column;
+            }
+            #links.active{
+                display: flex;
+            }
+            #burger{
+                display: flex;
+            }
+            .formation p, .mission p, .nouveautes p, .examen p, .resultat p{
+                font-size: 14px;
+            }
+            .hero-welcome p{
+                font-size: 14px;
+            }
+            .hero-welcome h2{
+                font-size: 24px;
+            }
+
+        }
+        @media (max-width: 690px){
+             #links{
+                position: absolute;
+                top: 60px;
+                right:0;
+                flex-direction: column;
+                background: rgba(0, 0, 0, 0.7);
+                width: auto;
+                height: auto;
+                display: none;
+                padding: 20px;
+                border-radius: 0 0 0 10px;
+                z-index: 1000;
+                
+            }
+            #links ul{
+                flex-direction: column;
+            }
+            #links.active{
+                display: flex;
+            }
+            #burger{
+                display: flex;
+            }
+            .formation p, .mission p, .nouveautes p, .examen p, .resultat p{
+                font-size: 12px;
+            }
+            .hero-welcome{
+                padding: 10px;
+            }
+            .formation h3, .mission h3, .nouveautes h3, .examen h3, .resultat h3{
+                font-size: 18px;
+            }
+
+            .hero-welcome p{
+                font-size: 12px;
+            }
+            .hero-welcome h2{
+                font-size: 20px;
+            }
+        }
+        @media (max-width: 590px){
+             #links{
+                position: absolute;
+                top: 60px;
+                right:0;
+                flex-direction: column;
+                background: rgba(0, 0, 0, 0.7);
+                width: auto;
+                height: auto;
+                display: none;
+                padding: 20px;
+                border-radius: 0 0 0 10px;
+                z-index: 1000;
+                
+            }
+            #links ul{
+                flex-direction: column;
+            }
+            #links.active{
+                display: flex;
+            }
+            #burger{
+                display: flex;
+            }
+            .formation p, .mission p, .nouveautes p, .examen p, .resultat p{
+                font-size: 11px;
+            }
+            .hero-welcome{
+                padding: 8px;
+            }
+            .formation h3, .mission h3, .nouveautes h3, .examen h3, .resultat h3{
+                font-size: 17px;
+            }
+            
+            .hero-welcome p{
+                font-size: 13px;
+            }
+            .hero-welcome h2{
+                font-size: 19px;
+            }
+            .mission p{
+                font-size: 9px;
+            }
+        }
+        @media (max-width: 460px){
+             #links{
+                position: absolute;
+                top: 60px;
+                right:0;
+                flex-direction: column;
+                background: rgba(0, 0, 0, 0.7);
+                width: auto;
+                height: auto;
+                display: none;
+                padding: 20px;
+                border-radius: 0 0 0 10px;
+                z-index: 1000;
+                
+            }
+            #links ul{
+                flex-direction: column;
+            }
+            #links.active{
+                display: flex;
+            }
+            #burger{
+                display: flex;
+            }
+            .formation p, .mission p, .nouveautes p, .examen p, .resultat p{
+                font-size: 8px;
+            }
+            .hero-welcome{
+                padding: 8px;
+            }
+            .formation h3, .mission h3, .nouveautes h3, .examen h3, .resultat h3{
+                font-size: 15px;
+            }
+            
+            .hero-welcome p{
+                font-size: 11px;
+            }
+            .hero-welcome h2{
+                font-size: 18px;
+            }
+            .mission p{
+                font-size: 7.5px;
+            }
+            .container{
+                position: absolute;
+                top: 0px;
+                right: 10px;
+            }
+        }
+         @media (max-width: 400px){
+             #links{
+                position: absolute;
+                top: 60px;
+                right:0;
+                flex-direction: column;
+                background: rgba(0, 0, 0, 0.7);
+                width: auto;
+                height: auto;
+                display: none;
+                padding: 20px;
+                border-radius: 0 0 0 10px;
+                z-index: 1000;
+                
+            }
+            #links ul{
+                flex-direction: column;
+            }
+            #links.active{
+                display: flex;
+            }
+            #burger{
+                display: flex;
+            }
+            .formation p, .mission p, .nouveautes p, .examen p, .resultat p{
+                font-size: 6.5px;
+
+            }
+            .hero-welcome{
+                padding: 6.5px;
+                margin-bottom: 50px;
+                height: 100%;
+                width: 100%;
+            }
+            .formation h3, .mission h3, .nouveautes h3, .examen h3, .resultat h3{
+                font-size: 11px;
+
+            }
+            
+            .hero-welcome p{
+                font-size: 12px;
+            }
+            .hero-welcome h2{
+                font-size: 17px;
+            }
+            .mission p{
+                font-size: 7px;
+            }
+            .hero-section{
+                height: 250px;
+                display: flex;
+                flex-direction: column;
+                overflow: visible;
+                margin-bottom: auto;
+                
+            }
+            .container{
+                
+                display: none;
+            }
+            .text{
+                display: grid;
+                grid-template-rows: 33.33%, 33.33% auto;
+                gap: 10px;
+            }
+           .formation, .mission, .nouveautes, .examen, .resultat{
+            width: 100%;
+            height: 200px;
+            margin: 0 auto;
+           }
+           .formation h3, .mission h3, .nouveautes h3, .examen h3, .resultat h3{
+            font-size: 15px;
+            text-align: center;
+            padding: 5px;
+           }
+           .formation p, .mission p, .nouveautes p, .examen p, .resultat p{
+                font-size: 9px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h1 data-aos="fade-up">Université EduGate-PH</h1>
+        </div>
+        <div id="burger" data-aos="fade-down" data-aos-duration="1000">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div id="links" data-aos="fade-down" data-aos-duration="1000">
+            <ul>
+                <li><a href="acceuil.html"><i class="fas fa-home"></i>Accueil</a></li>
+                <li><a href="formation.html"><i class="fas fa-graduation-cap"></i>Formation</a></li>
+                <li><a href="nouveaute.html"><i class="fas fa-bolt"></i>Nouveautes</a></li>
+                <li><a href="examen.html"><i class="fas fa-file-alt"></i>Examen</a></li>
+                <li><a href="resultat.html"><i class="fas fa-chart-line"></i>Resultat</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="hero-section">
+        <div class="hero-welcome" data-aos="fade-up" data-aos-duration="1000">
+            <h2>Universite EduGate-PH</h2>
+            <p>Bienvenue sur le site de l'Université EduGate-PH, votre portail vers l'éducation supérieure et les opportunités académiques.</p>
+            <p>Explorez nos formations, découvrez les dernières nouveautés et restez informé des examens et résultats.</p>
+            <p>Nous sommes là pour vous accompagner dans votre parcours académique.</p>
+        </div>
+        
+        <div class="container" data-aos="flip-left" data-aos-duration="1000">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="American school of Yaounde educatii (1).JPG" alt=""></div>
+                    <div class="swiper-slide"><img src="chuttersnap-TsgqbAyB8ZU-unsplash.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="20200916_150208_construire-des-ecoles-durables-avec-trespa--de-trespa.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="restaurant-dish-meal-food-produce-meat-lunch-cuisine-steak-asian-food-vegetables-dinner-hors-d-oeuvre-steak-dinner-830752.jpg" alt=""></div> -->
+                    <div class="swiper-slide"><img src="dhiva-krishna-GRV4ypBKgxE-unsplash.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="element5-digital-jCIMcOpFHig-unsplash.jpg" alt=""></div>
+            </div> 
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        </div>
+   
+    </section>
+
+        <div class="description" data-aos="zoom-in" data-aos-duration="1000">
+            <h2>Notre Université</h2>
+            <p>L'Université EduGate-PH est un établissement d'enseignement supérieur reconnu pour son excellence académique et sa recherche innovante. Nous offrons une large gamme de formations dans divers domaines, allant des sciences humaines aux sciences exactes.</p>
+            <p>Notre campus est un lieu dynamique où les étudiants peuvent s'épanouir, apprendre et se préparer à leur future carrière.</p>
+        </div>
+
+
+    <section class="text" data-aos="fade-up" data-aos-duration="1000">
+        <a href="#" class="mission">
+            <div class="box" data-aos="fade-right" data-aos-duration="1000">
+                <h3><i class="fas fa-flag"></i>Mission</h3>
+                <p>Notre mission est de fournir une éducation de qualité, de promouvoir la recherche et de contribuer au développement de la société.</p>
+                
+            </div>
+        </a>
+        <a href="formation.html" class="formation">
+            <div class="box" data-aos="fade-left" data-aos-duration="1000">
+                <h3><i class="fas fa-graduation-cap"></i>Formation</h3>
+                <p>Nous proposons des formations variées adaptées aux besoins du marché du travail et aux aspirations de nos étudiants.</p>
+                
+            </div>
+        </a>
+        <a href="nouveaute.html" class="nouveautes">
+            <div class="box" data-aos="fade-up" data-aos-duration="1000">
+                <h3><i class="fas fa-bolt"></i>Nouveautés</h3>
+                <p>Restez informé des dernières nouveautés, événements et actualités de l'université.</p>
+                
+                
+            </div>
+        </a>
+
+    </section>
+    <div class="nouveau" data-aos="zoom-out">Decouvrez les nouveaux paliers disponibles...</div>
+    <section class="test"data-aos="flip-right" data-aos-duration="1000">
+        <a href="examen.html" class="examen">
+            <div class="box" data-aos="flip-left" data-aos-duration="1000">
+                <h3><i class="fas fa-file-alt"></i>Examen</h3>
+                <p>Consultez les dates et informations relatives aux examens pour vous préparer au mieux.</p>
+                
+            </div>
+        
+        </a>
+        <a href="resultat.html" class="resultat">
+            <div class="box" data-aos="flip-right" data-aos-duration="1000">
+                <h3><i class="fas fa-chart-line"></i>Résultat</h3>
+                <p>Découvrez vos résultats d'examen et suivez votre progression académique.</p>
+                
+            </div>
+        </a>
+    </section>
+
+    <div class="container-contact" data-aos="fade-up" data-aos-duration="1000">
+        <fieldset>
+            <legend>FOMULAIRE DE CONTACT</legend>
+            <form action="" method="post" data-aos="fade-up" data-aos-duration="1000">
+                <label for="name">NOM</label><br>
+                <input type="tel" name="name" id="name" placeholder="Entrez votre nom" required ><br>
+                <label for="tel">TELEPHONE</label><br>
+                <input type="tel" name="tel" id="tel" placeholder="+237 6 99-99-99" required><br>
+                <label for="email">EMAIL</label><br>
+                <input type="email" name="email" id="email" placeholder="monemail@gmail.com" required><br>
+                <label for="message">MESSAGE</label><br>
+                <textarea name="message" id="message" placeholder="Ecrivez un message" required></textarea>
+            </form>
+            <div class="supEnv">
+                <input type="submit" value="envoyer">
+                <input type="reset" value="supprimer">
+            </div>
+        </fieldset>
+        <section class="WhatsApp" data-aos="flip-left" data-aos-duration="1000">
+            <h2>Nous ecrire via WhatsApp ?</h2>
+            <a href="https://wa.me/656531102" target="_blank" rel="noopener no-referrer"><img src="logo_whatsapp_icon_181642.png" alt="logo-whatsapp" class="logo-whatsapp"></a>
+            <p>Vous pouvez nous contacter directement via WhatsApp pour toute question ou information supplémentaire.</p>
+            <p>Pour nous écrire, cliquez sur le logo ci-dessus </p>
+        </section>
+        <section class="sponsor" data-aos="fade-up" data-aos-duration="1000">
+            <h2>Nos sponsors</h2>
+            <div class="spn-container" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="spn-orange"></div>
+                <div class="spn-france"></div>
+                <div class="spn-total"></div>
+            </div>
+        </section>
+
+        <section class="invest">
+            <h2>Investir dans l'éducation</h2>
+            <p>Nous croyons que l'éducation est la clé pour un avenir meilleur. Si vous souhaitez soutenir notre université, n'hésitez pas à nous contacter.</p>
+            <p>Votre contribution peut faire une grande différence dans la vie de nos étudiants.</p>
+            <p>Pour plus d'informations, veuillez nous contacter par email ou via le formulaire ci-dessus.</p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2023 Université EduGate-PH. Tous droits réservés.</p>
+        <p>Contact: <a href="mailto:princehilquia79@gmail.com"></a></p>
+        <p>Suivez-nous sur nos réseaux sociaux pour rester informé des dernières nouvelles et événements.</p>
+        <p><a href="https://wa.me/656531102"><i class="fab fa-whatsapp"></i>WhatsApp</a> | <a href="#"><i class="fab fa-twitter"></i>Twitter</a> | <a href="#"><i class="fab fa-instagram"></i>Instagram</a></p>
+        <p>Adresse: 123 Rue de l'Université, Toulouse, France</p>
+        <p>Site créé par Prince Hilquia.</p>
+
+
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+         <script src="swiper-bundle.js"></script>
+        <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            autoplay: true,
+            effect: 'coverflow',
+            speed: 2000,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        const burger = document.getElementById("burger");
+        const links = document.getElementById("links");
+
+        burger.addEventListener('click', ()=>{
+            links.classList.toggle('active');
+        });
+        burger.addEventListener('click', (e)=>{
+            if(!burger.contains(e.target) && !links.contains(e.target)){
+                links.classList.remove('active');
+            }
+        });
+        // Initialize AOS (Animate On Scroll)
+        AOS.init({
+            duration: 1500,
+            once: true,
+        });
+    </script>
+</body>
+</html>
