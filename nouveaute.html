@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Restez informe des nouveautes de l'université EduGate-PH : evenements, annonces, projets et innovations du campus">
+    <title>Nouveautes | Université EduGate-PH - Evenements, actualités</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nouveaute.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h1 data-aos="fade-up">Université EduGate-PH</h1>
+        </div>
+        <div id="burger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div id="links">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i>Accueil</a></li>
+                <li><a href="formation.html"><i class="fas fa-graduation-cap"></i>Formation</a></li>
+                <li><a href="nouveaute.html"><i class="fas fa-bolt"></i>Nouveautes</a></li>
+                <li><a href="examen.html"><i class="fas fa-file-alt"></i>Examen</a></li>
+                <li><a href="resultat.html"><i class="fas fa-chart-line"></i>Resultat</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="nouveau" data-aos="fade-up">
+        <h1>INAUGURATION DU NOUVEAU LABORATOIRE DES NANOTECHNOLOGIES</h1>
+    </section>
+
+    <section class="nouveau" data-aos="fade-up">
+        <h1>CREATION D'UNE NOUVELLE CANTINE POUR UNE ALIMENTATION PLUS SAINE DES ETUDIANTS</h1>
+    </section>
+    <section class="nouveau" data-aos="fade-up">
+        <h1>OUVERTURE D'UN NOUVEAU CENTRE DE RECHERCHE EN INFORMATIQUE</h1>
+    </section>
+    <img src="toa-heftiba-6bKpHAun4d8-unsplash.jpg" alt="Nouvelle cantine université" class="image-nouveau">
+    <section class="nouveau" data-aos="fade-up">
+        <h1>AMELIORATION DES INFRASTRUCTURES SPORTIVES POUR UNE MEILLEURE PRATIQUE</h1>
+    </section>
+    <section class="nouveau" data-aos="fade-up">
+        <h1>PARTENARIAT AVEC DES UNIVERSITES INTERNATIONALES POUR DES ECHANGES ACADEMIQUES</h1>
+    </section>
+    <footer>
+        <p>&copy; 2023 Université EduGate-PH. Tous droits réservés.</p>
+        <p>Contact: <a href="mailto:princehilquia79@gmail.com"></a></p>
+        <p>Suivez-nous sur nos réseaux sociaux pour rester informé des dernières nouvelles et événements.</p>
+        <p><a href="https://wa.me/656531102"><i class="fab fa-whatsapp"></i>WhatsApp</a> | <a href="#"><i class="fab fa-twitter"></i>Twitter</a> | <a href="#"><i class="fab fa-instagram"></i>Instagram</a></p>
+        <p>Adresse: 123 Rue de l'Université, Toulouse, France</p>
+        <p>Site créé par Prince Hilquia.</p>
+
+
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+         const links = document.getElementById("links");
+
+        burger.addEventListener('click', ()=>{
+            links.classList.toggle('active');
+        });
+        burger.addEventListener('click', (e)=>{
+            if(!burger.contains(e.target) && !links.contains(e.target)){
+                links.classList.remove('active');
+            }
+        });
+        AOS.init({
+            duration: 1500,
+            once: true,
+        });
+    </script>
+</body>
+</html>

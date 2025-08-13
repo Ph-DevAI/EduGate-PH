@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Consultez les resultats d'examen de l'université EduGate-PH. Acces rapide et securise pour etudiants et enseignants">
+    <title>Resultats d'examen | Université EduGate-PH - Acces en ligne</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resultat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <div class="logo" data-aos="fade-up">
+            <h1>Université EduGate-PH</h1>
+        </div>
+        <div id="burger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div id="links">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i>Accueil</a></li>
+                <li><a href="formation.html"><i class="fas fa-graduation-cap"></i>Formation</a></li>
+                <li><a href="nouveaute.html"><i class="fas fa-bolt"></i>Nouveautes</a></li>
+                <li><a href="examen.html"><i class="fas fa-file-alt"></i>Examen</a></li>
+                <li><a href="resultat.html"><i class="fas fa-chart-line"></i>Resultat</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+   
+    <section class="container-btn" data-aos="zoom-in">
+        <button class="btn" data-aos="flip-left">GENIE CIVIL</button>
+        <button class="btn" data-aos="flip-left">MECATRONIQUE</button>
+        <button class="btn" data-aos="flip-right">GENIE INFORMATIQUE</button>
+        <button class="btn" data-aos="flip-right">MECANIQUE</button>
+        <button class="btn" data-aos="flip-left">GENIE ROBOTIQUE</button>
+        <button class="btn" data-aos="flip-left">ELECTRONIQUE</button>
+        <button class="btn" data-aos="flip-right">KINESITHERAPEUTE</button>
+        <button class="btn" data-aos="flip-right">MEDECIN GENERAL</button>
+        <button class="btn" data-aos="flip-left">PHARMACIEN</button>
+        <button class="btn" data-aos="flip-left">DROITS</button>
+        <button class="btn" data-aos="flip-right">INTERPRETES</button>
+        <button class="btn" data-aos="flip-right">SCIENCES HUMAINES</button>
+        <button class="btn" data-aos="flip-left">RESESAUX ET TELECOMMUNICATIONS</button>
+        <button class="btn" data-aos="flip-left">ARCHITECTURE</button>
+        <button class="btn" data-aos="flip-right">GENIE TRANSPORTS</button>
+        <button class="btn" data-aos="flip-right">CHIMISTE</button>
+        <button class="btn" data-aos="flip-left">AUDIO ET PRODUCTION VIDEOS</button>
+        <button class="btn" data-aos="flip-left">MAGISTRATURES</button>
+    </section>
+
+    <section class="detail" data-aos="zoom-out">
+        <h1>cliquez sur votre filiere pour telecharger le fichier pdf des resultats de votre filiere afin de consulter vos notes !</h1>
+    </section>
+
+   
+    <section class="exam-officiel" data-aos="fade-up">
+        <div class="message" data-aos="fade-up">
+            <div class="officiel">
+                <h2>consulter les resultats des examens officiels</h2>
+            </div>
+        </div>
+        <div class="exam" data-aos="flip-left">
+            <a href="" class="licence" data-aos="fade-up">
+                <h3>LICENCE</h3>
+                <p>specialement pour les filieres de niveau L3</p>
+            </a>
+            <a href="" class="master1" data-aos="fade-down">
+                <h3>MASTER 1</h3>
+                <p>Specialement pour les filieres de niveau Master1</p>
+            </a>
+            <a href="" class="master2" data-aos="fade-up">
+                <h3>MASTER 2</h3>
+                <p>Specialement pour les filieres de niveau Master 2</p>
+            </a>
+            <a href="" class="doctorat" data-aos="fade-down">
+                <h3>DOCTORAT</h3>
+                <p>Specialement pour les filieres de niveau Doctorat</p>
+            </a>
+        </div>
+    </section>
+    <section class="contact" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Pour toute question, vous pouvez nous contacter par email à <a href="mailto:princehilquia79@gmail.com"><i class="fas fa-envelope"></i>princehilquia79@gmail.com</a></p>
+    </section>
+    <form action="#" method="post" data-aos="fade-up">
+        <label for="email">Inscription à la Newsletter :</label>
+        <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
+        <button type="submit">S'inscrire</button>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const burger = document.getElementById("burger");
+        const links = document.getElementById("links");
+
+        burger.addEventListener('click', ()=>{
+            links.classList.toggle('active');
+        });
+        burger.addEventListener('click', (e)=>{
+            if(!burger.contains(e.target) && !links.contains(e.target)){
+                links.classList.remove('active');
+            }
+        });
+        AOS.init({
+            duration: 1500,
+            once: true,
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2023 Université EduGate-PH. Tous droits réservés.</p>
+        <p>Contact: <a href="mailto:princehilquia79@gmail.com"></a></p>
+        <p>Suivez-nous sur nos réseaux sociaux pour rester informé des dernières nouvelles et événements.</p>
+        <p><a href="https://wa.me/656531102"><i class="fab fa-whatsapp"></i>WhatsApp</a> | <a href="#"><i class="fab fa-twitter"></i>Twitter</a> | <a href="#"><i class="fab fa-instagram"></i>Instagram</a></p>
+        <p>Adresse: 123 Rue de l'Université, Toulouse, France</p>
+        <p>Site créé par Prince Hilquia.</p>
+    </footer>
+</body>
+</html>
