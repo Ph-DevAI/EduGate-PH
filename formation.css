@@ -1,0 +1,367 @@
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        nav{
+            background-color: #370f7c;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo h1{
+            margin-left: 10px;
+            font-size: 2rem;
+            font-family: Bradley Hand itc;
+            color: green;
+            text-shadow: 1px 1px 2px #fff;
+        }
+        #links ul{
+            list-style: none;
+            display: flex;
+            margin-right: 10px;
+        }
+        #links ul li{
+            margin: 0;
+        }
+        #links ul li a{
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 5px 7px;
+            border-right: 1px solid green;
+            border-left: 1px solid green;
+            display: flex;
+        }
+        #links ul li a:hover{
+            text-decoration: none;
+            background-color: #f4f4f4;
+            color: #370f7c;
+            border: 1px solid #370f7c;
+            border-radius: 5px;
+        }
+         #burger{
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            display: none;
+         }
+         .text{
+            background-image: url("huge-29e2b06e0df09e049e63e312487d1af8.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100px;
+            margin: 0 auto;
+            border-radius: 20px;
+            box-shadow: 0 1px 3px #370f7c;
+            margin-top: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+            .text p{
+                font-size: 2rem;
+                color: #370f7c;
+                font-weight: bold;
+                text-shadow: 1px 1px 2px #fff;
+                background-color: rgba(0, 0, 0, 0.7);
+                padding: 10px;
+                border-radius: 10px;
+            }
+         .hero-section{
+            width: 100%;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: white;
+            height: fit-content;
+            border-radius: 20px;
+            box-shadow: 0 3px 5px rgba(0, 128, 0);
+            margin-bottom: 100px;
+
+         }
+         .swiperContainer-ing{
+            background-image: url("digital-twins-iot-maschinenbau-169-Xpert.Digital-png.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            object-fit: contain;
+            border-radius: 20px;
+         }
+         .swiperContainer-bio{
+            background-image: url("OIPNR6D3OOC.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            object-fit: contain;
+            border-radius: 20px;
+         }
+         .swiperContainer-lettres{
+            background-image: url("wesley-tingey-TdNLjGXVH3s-unsplash.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            object-fit: contain;
+            border-radius: 20px;
+         }
+        .title-ingenieurie, .title-biomedical, .title-lettres{
+                width: 100%;
+                height: 30%;
+                background-color: white;
+                border-radius: 20px;
+                box-shadow: 0 3px 5px rgba(0, 128, 0);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                font-size: 1.5rem;
+                color: #370f7c;
+                font-weight: bold;
+                text-shadow: 0px 3px 5px rgba(0, 128, 0, 0.7);
+            }
+            
+        .swiper-slide{
+            text-decoration: none;
+        }
+        .card{
+            width: 300px;
+            height: 400px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 8px rgba(0, 128, 0);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-decoration: none;
+            padding: 10px;
+        }
+        .title-card{
+            font-size: 1.2rem;
+            padding: 5px;
+            width: 100%;
+            height: 50%;
+            background-image: url("thisisengineering-nyAzMQ6Ejgs-unsplash.jpg");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+        .title-card-science{
+            font-size: 1.2rem;
+            padding: 5px;
+            width: 100%;
+            height: 50%;
+            background-image: url("online-marketing-hIgeoQjS_iE-unsplash.jpg");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+        #burger i{
+            color: white;
+            font-size: 30px;
+        }
+        .title-card-industriel{
+            font-size: 1.2rem;
+            padding: 5px;
+            width: 100%;
+            height: 50%;
+            background-image: url("image-captivante-usine-futuriste-ou-robots-avances-effectuent-taches-banales-precision-coordination_875722-5980.jpg");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+        .title-card-industriel h2{
+            padding: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            text-shadow: 2px 1px rgba(0, 128, 0, 0.7);
+        }
+        .title-card-modernes{
+            font-size: 1.2rem;
+            padding: 5px;
+            width: 100%;
+            height: 50%;
+            background-image: url("vladislav-klapin-YeO44yVTl20-unsplash.jpg");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+        .title-card-modernes h2{
+            padding: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            text-shadow: 2px 1px rgba(0, 128, 0, 0.7);
+        }
+        .title-card-science h2{
+            padding: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            text-shadow: 2px 1px rgba(0, 128, 0, 0.7);
+        }
+        .title-card-mecatronique{
+            font-size: 1.2rem;
+            padding: 5px;
+            width: 100%;
+            height: 50%;
+            background-image: url("thisisengineering-ZPeXrWxOjRQ-unsplash.jpg");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+        .title-card-reseau{
+            font-size: 1.2rem;
+            padding: 5px;
+            width: 100%;
+            height: 50%;
+            background-image: url("electronique.jpg");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+        .title-card-civil{
+            font-size: 1.2rem;
+            padding: 5px;
+            width: 100%;
+            height: 50%;
+            background-image: url("scott-blake-x-ghf9LjrVg-unsplash.jpg");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+        .title-card-mecanique{
+            font-size: 1.2rem;
+            padding: 5px;
+            width: 100%;
+            height: 50%;
+            background-image: url("genie-mecanique-1.jpg");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+        }
+        .title-card-informatique{
+            font-size: 1.2rem;
+            padding: 5px;
+            width: 100%;
+            height: 50%;
+            background-image: url("ordinateur.jpg");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+        }
+        .title-card-informatique h2{
+             padding: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            text-shadow: 2px 1px rgba(0, 128, 0, 0.7);padding: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            text-shadow: 2px 1px rgba(0, 128, 0, 0.7);
+        }
+        .title-card-mecanique h2{
+            padding: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            text-shadow: 2px 1px rgba(0, 128, 0, 0.7);
+        }
+        .title-card-civil h2{
+            padding: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            text-shadow: 2px 1px rgba(0, 128, 0, 0.7);
+        }
+
+        .title-card-reseau h2{
+            padding: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            text-shadow: 2px 1px rgba(0, 128, 0, 0.7);
+            font-size: 1.2rem;
+        }
+        .title-card-mecatronique h2{
+            padding: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            text-shadow: 2px 1px rgba(0, 128, 0, 0.7);
+            flex-wrap: wrap;
+        }
+        .title-card h2{
+            padding: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            text-shadow: 2px 1px rgba(0, 128, 0, 0.7);
+        }
+        .details{
+            font-size: 1.2rem;
+            margin: 0 auto;
+            text-align: center;
+            color: black;
+            text-decoration: none;
+        }
+         footer{
+            background-color: #370f7c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        footer p{
+            margin: 5px 0;
+        }
+        footer a{
+            color: white;
+            text-decoration: none;
+        }
+        @media (max-width: 768px){
+            .card{
+                width: 100%;
+                height: 100%;
+            }
+            .title-ingenieurie, .title-biomedical, .title-lettres{
+                font-size: 1rem;
+            }
+            .text{
+                width: fit-content;
+                height: fit-content;
+            }
+            .text p{
+                font-size: 1.5rem;
+            }
+             #links{
+                position: absolute;
+                top: 60px;
+                right:0;
+                flex-direction: column;
+                background: rgba(0, 0, 0, 0.7);
+                width: auto;
+                height: auto;
+                display: none;
+                padding: 20px;
+                border-radius: 0 0 0 10px;
+                z-index: 1000;
+                
+            }
+            #links ul{
+                flex-direction: column;
+            }
+            #links.active{
+                display: flex;
+            }
+            #burger{
+                display: flex;
+            }
+        }
+        

@@ -1,0 +1,235 @@
+*{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        nav{
+            background-color: #370f7c;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo h1{
+            margin-left: 10px;
+            font-size: 2rem;
+            font-family: Bradley Hand itc;
+            color: green;
+            text-shadow: 1px 1px 2px #fff;
+        }
+        #links ul{
+            list-style: none;
+            display: flex;
+            margin-right: 10px;
+        }
+        #links ul li{
+            margin: 0;
+        }
+        #links ul li a{
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 5px 7px;
+            border-right: 1px solid green;
+            border-left: 1px solid green;
+            display: flex;
+        }
+        #links ul li a:hover{
+            text-decoration: none;
+            background-color: #f4f4f4;
+            color: #370f7c;
+            border: 1px solid #370f7c;
+            border-radius: 5px;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 50% auto;
+            gap: 20px;
+        }
+        fieldset{
+            border-radius: 20px;
+        }
+        label{
+            color: #370f7c;
+            margin: 20px;
+        }
+        input{
+            width:50%;
+            border-radius: 2px;
+            margin: 10px;
+            border: 0px;
+        }
+        #burger i{
+            color: white;
+            font-size: 30px;
+        }
+        textarea{
+            width: 100%;
+            height: fit-content;
+            border-radius: 0px 0 20px 20px;
+        }
+        .supEnv{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .WhatsApp{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+        .WhatsApp h2{
+            color: gray;
+            text-shadow: 1px 1px black;
+        }
+        .WhatsApp a{
+            margin-top: 5px;
+            text-decoration: none;
+            color: #370f7c;
+        }
+        .WhatsApp a:hover{
+            text-decoration: underline;
+        }
+        .logo-whatsapp{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+        .logo-whatsapp:hover{
+            transform: scale(1.1), rotate(10deg);
+            transition: transform 0.3s ease;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        .WhatsApp p{
+            font-size: 1.2rem;
+            color: gray;
+            text-align: center;
+            margin: 10px 0;
+        }
+        .sponsor{
+            margin: 20px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #370f7c;
+            width: 100%;
+        }
+        .sponsor h2{
+            color: green;
+            text-shadow: 1px 1px black;
+        }
+        .spn-container{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .spn-orange, .spn-france, .spn-total{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-size: cover;
+            background-position: center;
+        }
+        .spn-orange{
+            background-image: url('download.png');
+        }
+        .spn-france{
+            background-image: url('download\ \(1\).png');
+        }
+        .spn-total{
+            background-image: url('download.jpeg');
+        }
+        .spn-orange:hover, .spn-france:hover, .spn-total:hover{
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        .invest{
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .invest h2{
+            color: #370f7c;
+            text-shadow: 1px 1px black;
+            font-size: 1.5rem;
+        }
+        .invest p{
+            color: gray;
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+        #burger{
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            display: none;
+        }
+
+       @media (max-width: 790px){
+            #links{
+                position: absolute;
+                top: 60px;
+                right:0;
+                flex-direction: column;
+                background: rgba(0, 0, 0, 0.7);
+                width: auto;
+                height: auto;
+                display: none;
+                padding: 20px;
+                border-radius: 0 0 0 10px;
+                z-index: 1000;
+                
+            }
+            #links ul{
+                flex-direction: column;
+            }
+            #links.active{
+                display: flex;
+            }
+            #burger{
+                display: flex;
+            }
+       }
+       @media (max-width: 460px){
+            .container{
+                display: flex;
+                flex-direction: column;
+            }
+            .sponsor{
+                display: flex;
+                flex-direction: column;
+            }
+       }
+        footer{
+            background-color: #370f7c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            
+        }
+        footer p{
+            margin: 5px 0;
+        }
+        footer a{
+            color: white;
+            text-decoration: none;
+        }

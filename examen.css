@@ -1,0 +1,294 @@
+ *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        nav{
+            background-color: #370f7c;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo h1{
+            margin-left: 10px;
+            font-size: 2rem;
+            font-family: Bradley Hand itc;
+            color: green;
+            text-shadow: 1px 1px 2px #fff;
+        }
+        #links ul{
+            list-style: none;
+            display: flex;
+            margin-right: 10px;
+        }
+        #links ul li{
+            margin: 0;
+        }
+        #links ul li a{
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 5px 7px;
+            border-right: 1px solid green;
+            border-left: 1px solid green;
+            display: flex;
+        }
+        #links ul li a:hover{
+            text-decoration: none;
+            background-color: #f4f4f4;
+            color: #370f7c;
+            border: 1px solid #370f7c;
+            border-radius: 5px;
+        }
+        #burger{
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            display: none;
+        }
+
+        .container{
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,128,0,0.7);
+            border-radius: 10px;
+        }
+        .container h1{
+            text-align: center;
+            color: #370f7c;
+            margin-bottom: 20px;
+        }
+        .container p{
+            color: gray;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        .exam-list{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .exam-list ul{
+            list-style: none;
+            padding: 0;
+        }
+        .exam-list ul li{
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #e9e9e9;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .exam-list ul li a{
+            color: #370f7c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .exam-list ul li:hover{
+            background-color: #d9d9d9;
+        }
+        .exam-details{
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .exam-details h3{
+            color: #370f7c;
+            margin-bottom: 10px;
+        }
+        .exam-details p{
+            color: gray;
+            font-size: 1.1rem;
+            margin: 5px 0;
+        }
+        .exam-registration{
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .exam-registration h3{
+            color: #370f7c;
+            margin-bottom: 10px;
+        }
+        .exam-registration form{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .exam-registration form input[type="text"],
+        .exam-registration form input[type="email"]{
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .exam-registration form button{
+            padding: 10px;
+            background-color: #370f7c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: cubic-bezier(0.23, 1, 0.320, 1);
+        }
+        .exam-registration form button:hover{
+            background-color: #5c2aa3;
+        }
+        #exam{
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Cpath fill="%23370f7c" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/%3E%3C/svg%3E');
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+        }
+        #exam:hover{
+            border-color: #370f7c;
+        }
+        #exam option{
+            padding: 10px;
+            font-size: 1rem;
+            color: #370f7c;
+            background-color: white;
+            z-index: 10;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            overflow-y: auto;
+            max-height: 200px;
+            cursor: pointer;
+        }
+        #exam option:checked{
+            background-color: #370f7c;
+            color: white;
+        }
+        #exam option:hover{
+            background-color: #f4f4f4;
+            color: #370f7c;
+        }
+        #exam:focus{
+            outline: none;
+            border-color: #370f7c;
+            box-shadow: 0 0 5px rgba(55, 15, 124, 0.5);
+        }
+        .exam-info{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .exam-info h2{
+            color: #370f7c;
+            margin-bottom: 10px;
+        }
+        .exam-info p{
+            color: gray;
+            font-size: 1.1rem;
+            margin: 5px 0;
+        }
+        .contact{
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .contact h2{
+            color: #370f7c;
+            margin-bottom: 10px;
+        }
+        .contact p{
+            font-size: 1.2rem;
+            color: gray;
+        }
+        .contact a{
+            color: #370f7c;
+            text-decoration: none;
+        }
+        .contact a:hover{
+            text-decoration: underline;
+        }
+
+        .container form{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        form input[type="email"]{
+            height: 30px;
+        }
+        footer{
+            text-align: center;
+            padding: 20px;
+            background-color: #370f7c;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p{
+            margin: 0;
+            font-size: 1rem;
+        }
+        footer a{
+            color: white;
+            text-decoration: none;
+        }
+        footer a:hover{
+            text-decoration: underline;
+        }
+        #burger i{
+            color: white;
+            font-size: 30px;
+        }
+        @media (max-width:800px){
+              #links{
+                position: absolute;
+                top: 60px;
+                right:0;
+                flex-direction: column;
+                background: rgba(0, 0, 0, 0.7);
+                width: auto;
+                height: auto;
+                display: none;
+                padding: 20px;
+                border-radius: 0 0 0 10px;
+                z-index: 1000;
+                
+            }
+            #links ul{
+                flex-direction: column;
+            }
+            #links.active{
+                display: flex;
+            }
+            #burger{
+                display: flex;
+            }
+            .contact a{
+                text-decoration: none;
+                font-size: 0.8rem;
+            }
+        }

@@ -1,0 +1,119 @@
+  *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        nav{
+            background-color: #370f7c;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo h1{
+            margin-left: 10px;
+            font-size: 2rem;
+            font-family: Bradley Hand itc;
+            color: green;
+            text-shadow: 1px 1px 2px #fff;
+        }
+        #links ul{
+            list-style: none;
+            display: flex;
+            margin-right: 10px;
+        }
+        #links ul li{
+            margin: 0;
+        }
+        #links ul li a{
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 5px 7px;
+            border-right: 1px solid green;
+            border-left: 1px solid green;
+            display: flex;
+        }
+        #links ul li a:hover{
+            text-decoration: none;
+            background-color: #f4f4f4;
+            color: #370f7c;
+            border: 1px solid #370f7c;
+            border-radius: 5px;
+        }
+         #burger{
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            display: none;
+        }
+        .nouveau{
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .image-nouveau{
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        #burger i{
+            color: white;
+            font-size: 30px;
+        }
+        .nouveau h1{
+            font-size: 24px;
+            color: #370f7c;
+        }
+          footer{
+            background-color: #370f7c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            
+        }
+        footer p{
+            margin: 5px 0;
+        }
+        footer a{
+            color: white;
+            text-decoration: none;
+        }
+        @media (max-width: 780px){
+             #links{
+                position: absolute;
+                top: 60px;
+                right:0;
+                flex-direction: column;
+                background: rgba(0, 0, 0, 0.7);
+                width: auto;
+                height: auto;
+                display: none;
+                padding: 20px;
+                border-radius: 0 0 0 10px;
+                z-index: 1000;
+                
+            }
+            #links ul{
+                flex-direction: column;
+            }
+            #links.active{
+                display: flex;
+            }
+            #burger{
+                display: flex;
+            }
+            .nouveau h1{
+                font-size: 1rem;
+            }
+        }
